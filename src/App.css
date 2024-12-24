@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.Tasks{
+  width: auto;
+  height: 70%;
+  background-color: rgb(194, 194, 195);
+  box-shadow: #383838;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.TasksH{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+  font-weight: 200;
+}
+
+.TasksLI{
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+
+.Login{
+  background-color: #808081;
+  box-shadow: #393939;
+  display: flex;
+  flex-direction: row;
+}
