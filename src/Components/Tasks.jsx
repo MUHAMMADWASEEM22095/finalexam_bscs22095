@@ -1,23 +1,16 @@
 import React from 'react'
+import { Outlet, Link } from "react-router-dom";
 
-function HandleTask(){
-
-}
-
-
-export default function Tasks () {
+export default function Tasks (task) {
     return (
         <div>
             <div className='Tasks'>
                 <h3 className='TasksH'>Task To Complete</h3>
                 <ul className='TaskL'>
                     <li className='TaskLI'>
-                        <p>TASK 1</p>
+                        <p>{task}</p>
                     </li>
                 </ul>
-            </div>
-            <div className='Button'> 
-                <button type="button" onClick={HandleTask}>ADD TASK</button>
             </div>
         </div>
     )

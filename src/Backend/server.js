@@ -1,29 +1,33 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const client = require('./Models/User');
-const Roomdata = require('./Models/Airbnb');
-
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-
 app.use(express.json());
 const cors = require('cors');
 app.use(cors()); 
 
 
-mongoose.connect("mongodb://localhost:27017/AirBnbDb", { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
+
+  
+
+
+
+app.get('/task',async(req,res)=>{
+  
 })
-  .then(() => console.log('✅ Connected to MongoDB!'))
-  .catch(err => console.error('❌ Error connecting to MongoDB:', err));
 
 
-const Airbnb = require('./Models/Airbnb');
+
+
+
+
+
+
+
+
+
 app.get('/', async (req, res) => {
     try {
         const airbnbs = await Airbnb.find(); 
@@ -32,6 +36,18 @@ app.get('/', async (req, res) => {
         res.status(500).json({ message: 'Error fetching Airbnb data', error });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/airbnbs', async (req, res) => {
     try {
         const airbnbs = await Airbnb.find();
