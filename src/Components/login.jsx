@@ -6,35 +6,53 @@ export default function Login() {
     const [inputEmail, setInputEmail] = useState('')
     const [inputPassword, setInputPassword] = useState('')
 
-    const namechange = event =>{
+    const namechange = event => {
         setInputName(event.target.value)
     }
 
-    const emailchange = event =>{
+    const emailchange = event => {
         setInputEmail(event.target.value)
     }
 
-    const passwordchange = event =>{
+    const passwordchange = event => {
         setInputPassword(event.target.value)
     }
 
-    const click = color =>{
+    const click = color => {
         color.preventDefault();
         alert(inputName)
         alert(inputEmail)
         alert(inputPassword)
     }
-    
+
     return (
-        <div className='Login'>
-            <form action="" method='post'>
-                <label htmlFor="">Name</label>
-                <input type="text" placeholder='Enter Name' onChange={namechange} value={inputName}/>
-                <label htmlFor="">Email</label>
-                <input type="text" placeholder='Enter Email' onChange={emailchange} value={inputEmail}/>
-                <label htmlFor="">Password</label>
-                <input type="password" placeholder='Enter Name' onChange={passwordchange} value={inputPassword}/>
-                <button type='sumbit' onClick={click}>Login</button>
+        <div className="login-container">
+            <h2>Login</h2>
+
+            <form >
+                <div className="input-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={inputEmail}
+                        onChange={emailchange}
+                        placeholder="Enter your email"
+                    />
+                </div>
+
+                <div className="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        value={inputPassword}
+                        onChange={passwordchange}
+                        placeholder="Enter your password"
+                    />
+                </div>
+
+                <button type="submit" className="login-btn" onClick={click}>Login</button>
             </form>
         </div>
     )
